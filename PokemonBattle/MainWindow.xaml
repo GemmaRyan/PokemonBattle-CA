@@ -1,0 +1,27 @@
+﻿<Window x:Class="PokemonBattle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PokemonBattle"
+        mc:Ignorable="d"
+        Title="MainPage" Height="450" Width="800" Background="Red">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="Red" Grid.Row="0">
+            <TextBlock Text="Pokémon Battle" FontSize="50" FontWeight="Bold" Margin="200,109,200,38" Foreground="Black"/>
+        </Grid>
+
+
+        <Grid Background="White" Grid.Row="1">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button Content="Start Game" FontSize="24" Click="StartGame_Click"
+                        Background="#D3D3D3" Margin="255,49,245,88" />
+        </Grid>
+    </Grid>
+</Window>
+    
