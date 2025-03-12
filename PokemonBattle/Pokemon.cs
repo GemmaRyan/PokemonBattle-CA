@@ -14,8 +14,11 @@ namespace PokemonBattle
         public string PokemonName { get; set; }
         public string PokeType { get; set; }
 
+        public Types Types { get; set; }
+        public Attacks Attacks { get; set; }
+        public Defence Defence { get; set; }
+        public Special Special { get; set; }
 
-        public virtual Types Types { get; set; }
 
     }
     public class Types
