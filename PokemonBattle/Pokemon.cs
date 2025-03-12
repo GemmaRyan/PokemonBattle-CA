@@ -14,12 +14,13 @@ namespace PokemonBattle
         public string PokemonName { get; set; }
         public string PokeType { get; set; }
 
+
+        //Added HP levels and pcitures
+        public string ImageURL_Front { get; set; }
+        public string ImageURL_Back { get; set; }
+        public int Health { get; set; }
+
         public Types Types { get; set; }
-        public Attacks Attacks { get; set; }
-        public Defence Defence { get; set; }
-        public Special Special { get; set; }
-
-
     }
     public class Types
     {
@@ -28,31 +29,19 @@ namespace PokemonBattle
         public string Weakness { get; set; }
         public string Effective { get; set; }
 
-        public virtual List<Pokemon> Poke { get; set; }
     }
-    public class Attacks
+
+    public class Moves
     {
-        public int MoveID { set; get; }
-        public string PokeType { get; set; }
-        public string Attack { get; set; }
-        public int Accuracy {  set; get; }
+        public int MoveID { get; set; }
+        public string MoveName { get; set; }
+        public Types Types { get; set; }
+        public string AttackName { get; set; }
+        public int AttackDamage { get; set; }
+        public int Accuracy { get; set; }
+
 
     }
-    public class Defence
-    {
-        public int MoveID { set; get; }
-        public string PokeType { get; set; }
-        public string Defend { get; set; }
-        public int Accuracy { set; get; }
-    }
-    public class Special
-    {
-        public int MoveID { set; get; }
-        public string PokeType { get; set; }
-        public string SpecialMove { get; set; }
-        public int Accuracy { get; set; }
-    }
- 
 
     public class PokeData : DbContext
     {
@@ -60,9 +49,7 @@ namespace PokemonBattle
 
         public DbSet<Pokemon> Pokemon { get; set; }
         public DbSet<Types> Types { get; set; }
-        public DbSet<Attacks> Attacks { get; set; }
-        public DbSet<Defence> Defence { get; set; }
-        public DbSet<Special> Special { get; set; }
+
     }
 }
 
