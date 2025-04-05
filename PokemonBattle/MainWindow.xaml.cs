@@ -25,6 +25,11 @@ namespace PokemonBattle
             InitializeComponent();
         }
 
+        private void StartGame_Click(object sender, RoutedEventArgs e)      //fix this probably -- dk if this will work
+        {
+            var navService = NavigationService.GetNavigationService(this);
+            navService?.Navigate(new PokeSelection1());
 
+        }
     }
 }

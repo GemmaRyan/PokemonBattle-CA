@@ -12,8 +12,6 @@ namespace PokemonBattle
     {
         public int PokeDexID { get; set; }
         public string PokemonName { get; set; }
-        public string PokeType { get; set; }
-
 
         //Added HP levels and pcitures
         public string ImageURL_Front { get; set; }
@@ -21,6 +19,8 @@ namespace PokemonBattle
         public int Health { get; set; }
 
         public Types Types { get; set; }
+
+
     }
     public class Types
     {

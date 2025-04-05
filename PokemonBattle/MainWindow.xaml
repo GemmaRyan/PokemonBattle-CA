@@ -19,7 +19,7 @@
 
         <Grid Background="White" Grid.Row="1">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" />
-            <Button Content="Start Game" FontSize="24" Click="StartGame_Click"
+            <Button x:Name="btnStart" Content="Start" FontSize="24" Click="StartGame_Click"
                         Background="#D3D3D3" Margin="255,49,245,88" />
         </Grid>
     </Grid>
